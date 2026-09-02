@@ -7,9 +7,9 @@ import CalendarEmbed from "../section/book/CalendarEmbed";
 import WhatWeCover from "../section/book/WhatWeCover";
 
 export const metadata: Metadata = {
-  title: { absolute: "Book a Call | Paving Pros" },
+  title: { absolute: "Book an Estimate | Paving Pros" },
   description:
-    "Book a free call. We'll pull up the territory map for your area, give you a realistic lead range, and tell you whether your territory is still open.",
+    "Pick a time for us to come out, measure the job and price it in writing. Free, with no obligation.",
 };
 
 export default function BookPage(): JSX.Element {
@@ -19,11 +19,11 @@ export default function BookPage(): JSX.Element {
         eyebrow="Book a call"
         headline={
           <>
-            One short call, and you&apos;ll know if your{" "}
-            <span>territory is open</span>
+            Pick a time and we&apos;ll come and{" "}
+            <span>look at the job</span>
           </>
         }
-        subhead="Pick a time below. We'll walk you through the territory map for your area, give you a realistic lead range, and answer anything you want to ask. No pitch."
+        subhead="Pick a slot below. We come out, measure it, check how it drains, and put a price in writing afterwards. No charge and no obligation."
       />
       <CalendarEmbed />
       <PhotoBand

@@ -2,24 +2,24 @@ import React from "react";
 
 const items = [
   {
-    icon: "fa-solid fa-map-location-dot",
-    title: "Your territory on the map",
-    text: "We pull up your area, show you where the lines fall, and tell you straight whether it's open or already taken.",
+    icon: "fa-solid fa-ruler-combined",
+    title: "We measure it properly",
+    text: "Square footage, depths, and the levels — so the price is based on the job rather than a guess from the kerb.",
   },
   {
-    icon: "fa-solid fa-chart-line",
-    title: "A realistic lead range",
-    text: "What volume your specific territory and preferences are likely to produce, in and out of season.",
+    icon: "fa-solid fa-droplet",
+    title: "We check where water goes",
+    text: "Drainage is what kills asphalt. We look at where it runs now and what has to change so it does not sit.",
   },
   {
     icon: "fa-solid fa-file-invoice-dollar",
-    title: "What it costs, exactly",
-    text: "The membership, what's included, and what isn't. No pitch deck, no per-lead surprises.",
+    title: "You get it in writing",
+    text: "Base depth, asphalt depth, finished grade and the schedule — on paper, so you can compare it against anyone else's.",
   },
   {
     icon: "fa-solid fa-comments",
     title: "Your questions",
-    text: "Bring them. One short call is usually enough to know whether this is worth your time.",
+    text: "Bring them. Most people want to know how long it takes and when they can drive on it.",
   },
 ];
 
@@ -34,7 +34,7 @@ const WhatWeCover = () => {
                 <i className="fa-solid fa-circle-dot" aria-hidden="true"></i>
                 The call
               </span>
-              <h2 className="text-reveal-anim">What we cover on the call</h2>
+              <h2>What happens when we come out</h2>
             </div>
           </div>
         </div>

@@ -1,36 +1,32 @@
 import React from "react";
+import { estimateWindow } from "../../../lib/site";
 
-/**
- * The template's Mission panel aesthetic — one bordered block divided by
- * hairlines rather than a row of separate cards — with the headline promise
- * given a full-width feature cell. All five benefits from the copy deck.
- */
-const benefits = [
+const reasons = [
   {
-    icon: "fa-solid fa-map-location-dot",
-    title: "Exclusive territory",
-    text: "You choose the area you actually want to work. Once it's yours, no other contractor gets leads from it. If a competitor tries to sign up in your territory, they go on a waitlist.",
+    icon: "fa-solid fa-layer-group",
+    title: "We build the base, not just the surface",
+    text: "Most asphalt that fails early failed underneath. We excavate, grade and compact a proper aggregate base before any asphalt goes down, because that is what decides whether it lasts five years or twenty.",
     feature: true,
   },
   {
-    icon: "fa-solid fa-mobile-screen-button",
-    title: "Leads delivered straight to you",
-    text: "Every lead lands in your inbox and on your phone by text the moment it comes in, with the owner's name, phone number, address, and what they need done.",
+    icon: "fa-solid fa-file-lines",
+    title: "A written scope, before we start",
+    text: `You get base depth, asphalt depth, finished grade and where the water will run, in writing, within ${estimateWindow}. If something changes once we open it up, you hear about it before we carry on.`,
   },
   {
-    icon: "fa-solid fa-filter",
-    title: "Pre-qualified before you see them",
-    text: "We ask about property type, approximate size, timeline, and budget before a lead is passed on. Small patch jobs and people who are just curious get filtered out.",
+    icon: "fa-solid fa-user-check",
+    title: "The person who quotes it runs it",
+    text: "You are not handed to a salesperson and then met by strangers. Whoever walks the job with you is the one accountable for how it goes in.",
   },
   {
-    icon: "fa-solid fa-circle-check",
-    title: "A verified listing in the directory",
-    text: "Your company gets a full profile in the Paving Pros directory with your service area, services, photos, and a Verified Pro badge, so owners who find you on their own can contact you directly.",
+    icon: "fa-solid fa-broom",
+    title: "The site is left clean",
+    text: "Edges cut straight, spoil carted away, driveway swept, and your grass and kerbs the way we found them. We tell you the cure time before we leave so nobody parks on it too early.",
   },
   {
-    icon: "fa-solid fa-road",
-    title: "Residential and commercial",
-    text: "Driveways, parking lots, sealcoating, resurfacing, crack filling, line striping, and concrete. You tell us what you take on and we send you the jobs that match.",
+    icon: "fa-solid fa-shield-halved",
+    title: "Licensed, insured and local",
+    text: "We work a defined patch and we are the ones who come back if something is not right. Certificates go to you or your property manager before the crew arrives.",
   },
 ];
 
@@ -43,15 +39,15 @@ const Benefits = () => {
             <div className="sec-title text-center">
               <span className="sub-title justify-content-center">
                 <i className="fa-solid fa-circle-dot" aria-hidden="true"></i>
-                Membership
+                Why us
               </span>
-              <h2>What you get as a Paving Pros member</h2>
+              <h2>Why property owners call us back</h2>
             </div>
           </div>
         </div>
 
         <div className="membership-grid wow">
-          {benefits.map((item) => (
+          {reasons.map((item) => (
             <div
               className={`membership-cell ${item.feature ? "membership-cell--feature" : ""}`}
               key={item.title}

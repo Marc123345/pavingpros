@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 
 export const navItems = [
   { href: "/", label: "Home" },
-  { href: "/how-it-works", label: "How It Works" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/services", label: "Services" },
+  { href: "/residential", label: "Residential" },
+  { href: "/commercial", label: "Commercial" },
+  { href: "/gallery", label: "Our Work" },
   { href: "/about", label: "About" },
-  { href: "/book", label: "Book a Call" },
 ];
 
 interface NavLinksProps {

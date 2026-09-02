@@ -18,15 +18,15 @@ const CalendarEmbed = () => {
           )}
           <iframe
             src={calendarEmbedUrl}
-            title="Book a call with Paving Pros"
+            title="Book an estimate with Paving Pros"
             onLoad={() => setLoaded(true)}
             className="calendar-frame"
             style={{ opacity: loaded ? 1 : 0 }}
           />
         </div>
         <p className="calendar-note">
-          Live availability. No card required. If nothing here works for you,
-          call or email us and we&apos;ll find a time.
+          Live availability, no card required. If nothing here suits, call us
+          and we&apos;ll find a time that does.
         </p>
       </div>
     </section>

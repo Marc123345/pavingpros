@@ -3,7 +3,8 @@
 import AppImage from "../elements/AppImage";
 import React from "react";
 import Link from "next/link";
-import { site } from "../../../lib/site";
+import { serviceAreas, site } from "../../../lib/site";
+import { services } from "../../../lib/services";
 
 const Footer = () => {
   return (
@@ -12,8 +13,8 @@ const Footer = () => {
         <div className="auto-container">
           <div className="row">
             <div className="footer-upper col-lg-12">
-              <h2 className="footer-title text-reveal-anim">
-                ONE PAVER — <br /> PER TERRITORY
+              <h2 className="footer-title">
+                PAVED RIGHT — <br /> THE FIRST TIME
               </h2>
             </div>
           </div>
@@ -31,9 +32,8 @@ const Footer = () => {
                   </Link>
                 </div>
                 <p className="footer-des">
-                  A directory for paving contractors that sends every lead in
-                  your area to you alone. No shared lists, no racing three
-                  other crews to the same driveway.
+                  Asphalt paving, sealcoating, repairs and striping for homes and
+                  businesses. Free written estimates, licensed and insured.
                 </p>
                 <ul className="social-icon-two">
                   <li><Link href={site.social.facebook} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link></li>
@@ -42,31 +42,38 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+
+            <div className="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div className="footer-widget">
+                <h5 className="widget-title">Services</h5>
+                <ul className="user-links">
+                  {services.slice(0, 5).map((s) => (
+                    <li key={s.slug}>
+                      <Link href={`/services/${s.slug}`}>
+                        {s.title} <i className="fa-solid fa-arrow-right" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
             <div className="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-6">
               <div className="footer-widget">
-                <h5 className="widget-title">Paving Pros</h5>
+                <h5 className="widget-title">Company</h5>
                 <ul className="user-links">
-                  <li><Link href="/">Home <i className="fa-solid fa-arrow-right" /></Link></li>
-                  <li><Link href="/how-it-works">How It Works <i className="fa-solid fa-arrow-right" /></Link></li>
-                  <li><Link href="/pricing">Pricing <i className="fa-solid fa-arrow-right" /></Link></li>
+                  <li><Link href="/residential">Residential <i className="fa-solid fa-arrow-right" /></Link></li>
+                  <li><Link href="/commercial">Commercial <i className="fa-solid fa-arrow-right" /></Link></li>
+                  <li><Link href="/gallery">Our work <i className="fa-solid fa-arrow-right" /></Link></li>
+                  <li><Link href="/service-areas">Service areas <i className="fa-solid fa-arrow-right" /></Link></li>
                   <li><Link href="/about">About <i className="fa-solid fa-arrow-right" /></Link></li>
                 </ul>
               </div>
             </div>
-            <div className="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-6">
-              <div className="footer-widget">
-                <h5 className="widget-title">For Contractors</h5>
-                <ul className="user-links">
-                  <li><Link href="/sign-up">Claim a territory <i className="fa-solid fa-arrow-right" /></Link></li>
-                  <li><Link href="/how-it-works#faq">Common questions <i className="fa-solid fa-arrow-right" /></Link></li>
-                  <li><Link href="/pricing#faq">Pricing questions <i className="fa-solid fa-arrow-right" /></Link></li>
-                  <li><Link href={site.bookingUrl}>Book a call <i className="fa-solid fa-arrow-right" /></Link></li>
-                </ul>
-              </div>
-            </div>
+
             <div className="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
               <div className="footer-widget contact-widget">
-                <h5 className="widget-title">Talk To Us</h5>
+                <h5 className="widget-title">Get in touch</h5>
                 <div className="widget-content">
                   <div className="address">
                     <p>Call</p>
@@ -76,9 +83,25 @@ const Footer = () => {
                     <p>Email</p>
                     <Link href={`mailto:${site.email}`}>{site.email}</Link>
                   </div>
+                  <div className="address">
+                    <p>Hours</p>
+                    {site.hours.map((h) => (
+                      <span className="d-block footer-hours" key={h.days}>
+                        {h.days}: {h.time}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="footer-areas">
+            <span className="footer-areas-label">Serving</span>
+            <p>
+              {serviceAreas.join(" · ")} —{" "}
+              <Link href="/service-areas">see all areas</Link>
+            </p>
           </div>
         </div>
       </div>
@@ -87,12 +110,12 @@ const Footer = () => {
         <div className="auto-container">
           <div className="inner-container">
             <div className="copyright-text">
-              © {new Date().getFullYear()} Paving Pros. All rights reserved.
+              © {new Date().getFullYear()} {site.legalName}. All rights reserved.
             </div>
             <div className="footer-links-wrapper">
-              <Link href="/sign-up">Claim my territory</Link>
-              <Link href="/pricing">Pricing</Link>
-              <Link href="/how-it-works">How it works</Link>
+              <Link href="/contact">Free estimate</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/service-areas">Service areas</Link>
             </div>
           </div>
         </div>

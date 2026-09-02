@@ -6,16 +6,17 @@ import Problem from "./section/home/Problem";
 import Benefits from "./section/home/Benefits";
 import Marquee from "./section/home/Marquee";
 import Steps from "./section/home/Steps";
-import Work from "./section/home/Work";
 import WhoFor from "./section/home/WhoFor";
+import Work from "./section/home/Work";
 import Testimonials from "./section/home/Testimonials";
+import ServiceArea from "./section/home/ServiceArea";
 import Stats from "./section/home/Stats";
 import ClosingCta from "./section/shared/ClosingCta";
 
 export const metadata: Metadata = {
-  title: "Paving Pros | Exclusive Paving Leads in Your Territory",
+  title: "Paving Pros | Asphalt Paving, Sealcoating & Repair",
   description:
-    "Join the Paving Pros directory and get asphalt, sealcoating, and concrete leads sent straight to your phone. One contractor per territory. No contract, cancel anytime.",
+    "Driveways, parking lots and private roads — paved, sealed, striped and repaired. Free written estimates, licensed and insured, and a base built to last.",
 };
 
 export default function Home(): JSX.Element {
@@ -29,10 +30,13 @@ export default function Home(): JSX.Element {
       <WhoFor />
       <Work />
       <Testimonials />
+      <ServiceArea />
       <Stats />
       <ClosingCta
-        headline="Your territory is either yours or someone else's."
-        body="Territories are assigned on a first-come basis and we only take one paver per area. Check yours now."
+        headline="Get a free estimate on your driveway or lot."
+        body="We come out, measure it properly, and put a price in writing. No fee and no obligation."
+        buttonLabel="Get my free estimate"
+        href="/contact"
       />
     </LayoutWrapper>
   );

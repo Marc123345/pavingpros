@@ -1,23 +1,31 @@
 # Paving Pros
 
-Five-page marketing site for the Paving Pros contractor directory, built on the
-Nexella Next.js template and recoloured to the Paving Pros brand.
+Marketing site for Paving Pros, an asphalt paving contractor — driveways, lots,
+sealcoating, repairs and striping, sold to homeowners and property managers.
+Built on the Nexella Next.js template and recoloured to the Paving Pros brand.
+
+It began as a lead-generation directory aimed at contractors; the design survived
+that pivot but every word of the copy was rewritten for property owners.
 
 ## Pages
 
 | Route | Page |
 | --- | --- |
 | `/` | Home |
-| `/how-it-works` | How It Works |
-| `/pricing` | Pricing |
+| `/services` | All services |
+| `/services/[slug]` | Six service pages, generated from `src/lib/services.ts` |
+| `/residential` | For homeowners |
+| `/commercial` | For businesses and property managers |
+| `/gallery` | Our work |
+| `/service-areas` | Towns covered |
 | `/about` | About |
-| `/sign-up` | Sign Up / Contact |
-| `/book` | Book a call — embeds the live booking calendar |
+| `/contact` | Free estimate request |
+| `/book` | Book an estimate visit (calendar embed) |
 | `/thank-you` | Post-submission confirmation (noindex) |
 
-The home page hero carries a short version of the sign-up form (company, name,
-phone, email, city/state). It posts to the same `/api/signup` endpoint as the
-full form and redirects to `/thank-you`.
+Adding an entry to `services.ts` adds a service page, a card on `/services`, a
+footer link and a marquee label. The home hero carries a short estimate form that
+posts to the same `/api/quote` endpoint as the full form on `/contact`.
 
 ## Brand
 
@@ -41,31 +49,36 @@ everything Paving Pros specific lives in `src/app/styles/css/pavingpros.css`.
 
 ## Before launch
 
-All copy is the approved deck verbatim. Everything still needing a real value is
-in **`src/lib/site.ts`** — edit that one file and the whole site updates:
+Copy is written for property owners; the original contractor-facing deck no longer
+applies. Everything still needing a real value is in **`src/lib/site.ts`**:
 
 - `site.phone` / `site.phoneHref` / `site.email` — real contact details
-- `site.bookingUrl` — booking link for every "Book a call" button
+- `site.address` — yard or mailing address for the footer
+- `site.hours` — confirm the opening hours
 - `site.url` — production domain (also update `metadataBase` in `src/app/layout.tsx`)
 - `site.social` — social profile links
-- `pricing.price` — replaces `[PRICE]`; set `pricing.adSpendNote` if ad spend is billed separately
-- `stats` — replaces the `[X]` figures, or set `stats.show = false` to hide the bar
-- `jobValues` — verify the residential and commercial job-value ranges
-- `statesRun` — number of states on the About page
-- `testimonials` — two or three real contractor quotes (empty array hides the section)
-- `team` — real names, titles, and bios
+- `serviceAreas` and `serviceRadius` — the real towns; these drive the footer,
+  the home area section and the whole `/service-areas` page
+- `stats` — replaces the `[X]` figures, or set `stats.show = false`
+- `credentials.licence` — licence number shown on About
+- `testimonials` — real reviews (empty array hides the section)
+- `team` — real names, titles and bios
+- `estimateWindow` — how fast an estimate actually comes back
 
 Also outstanding:
 
-- **`src/app/api/signup/route.ts`** accepts the territory request and returns success
-  but does not deliver it anywhere yet. Wire it to the CRM, an email provider, or a
+- **`src/app/api/quote/route.ts`** accepts the estimate request and returns success
+  but does not deliver it anywhere yet. Wire it to a CRM, an email provider, or a
   webhook before launch. Both the hero form and the full form post to it; the hero
   form tags its payload with `source: "hero"`.
-- **The booking calendar** (`calendarEmbedUrl` in `src/lib/site.ts`) is the live
-  GoHighLevel/LeadConnector widget lifted from the Paving Leads site. Two things to
-  check in GoHighLevel before launch: the slot is currently **30 minutes** (the old
-  Paving Leads copy said 15), and it is serving times in **Asia/Jerusalem**, which is
-  what US contractors will be converting from.
+- **`/gallery` is stock.** Replace it with real job photos, ideally
+  before-and-afters, as soon as there are any. Stock sells far worse than the
+  contractor's own work.
+- **The booking calendar** on `/book` is still the GoHighLevel widget from the
+  Paving Leads *agency* site — it books a "Paving Leads Strategy Call", runs on a
+  30-minute slot, and serves **Asia/Jerusalem** times. A paving contractor needs
+  their own calendar here, or `/book` should be dropped and everything pointed at
+  the quote form instead.
 - Two copy claims are marked `[VERIFY]` in the deck and are live on the site as written:
   the member dashboard (How It Works, step 6) and the off-season pause. Confirm both,
   or cut them.

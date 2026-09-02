@@ -4,21 +4,18 @@ import React, { type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useFormSubmit } from "../../../lib/hooks/useFormSubmit";
+import { estimateWindow, site } from "../../../lib/site";
 
-/**
- * Short version of the sign-up form. Captures just enough to check a
- * territory; the full preferences form lives on /sign-up.
- */
+/** Short estimate request. The full form lives on /contact. */
 const HeroForm = () => {
   const router = useRouter();
-  const { submit, loading, error } = useFormSubmit("/api/signup");
+  const { submit, loading, error } = useFormSubmit("/api/quote");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const payload = Object.fromEntries(formData.entries());
     payload.source = "hero";
-
     try {
       await submit(payload);
       router.push("/thank-you");
@@ -30,19 +27,15 @@ const HeroForm = () => {
   return (
     <div className="hero-form-card">
       <div className="hero-form-head">
-        <h2 className="hero-form-title">Check your territory</h2>
+        <h2 className="hero-form-title">Get a free estimate</h2>
         <p className="hero-form-sub">
-          Takes about a minute. We&apos;ll tell you within one business day
-          whether your area is open.
+          Tell us where and what, and we&apos;ll come back within{" "}
+          {estimateWindow} with a price. No pressure, no fee.
         </p>
       </div>
 
       <form onSubmit={handleSubmit}>
         <div className="hero-form-grid">
-          <div className="hero-field">
-            <label htmlFor="hero-company">Company name</label>
-            <input id="hero-company" name="company" type="text" required />
-          </div>
           <div className="hero-field">
             <label htmlFor="hero-name">Your name</label>
             <input id="hero-name" name="name" type="text" required />
@@ -55,13 +48,23 @@ const HeroForm = () => {
             <label htmlFor="hero-email">Email</label>
             <input id="hero-email" name="email" type="email" required />
           </div>
+          <div className="hero-field">
+            <label htmlFor="hero-property">Property</label>
+            <select id="hero-property" name="property" required defaultValue="">
+              <option value="" disabled>
+                Select
+              </option>
+              <option value="Residential">Home</option>
+              <option value="Commercial">Business or property</option>
+            </select>
+          </div>
           <div className="hero-field hero-field--wide">
-            <label htmlFor="hero-location">City and state you work from</label>
+            <label htmlFor="hero-address">Job address</label>
             <input
-              id="hero-location"
-              name="base_location"
+              id="hero-address"
+              name="address"
               type="text"
-              placeholder="e.g. Grand Rapids, MI"
+              placeholder="Street and town"
               required
             />
           </div>
@@ -74,21 +77,20 @@ const HeroForm = () => {
         )}
 
         <button type="submit" className="hero-form-submit" disabled={loading}>
-          {loading ? "Checking…" : "Check my territory"}
+          {loading ? "Sending…" : "Get my free estimate"}
           <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </button>
 
         <p className="hero-form-note">
-          No contract. Cancel anytime. We&apos;ll never share your details with
-          other contractors.
+          Free estimates. No obligation. We&apos;ll never pass your details on.
         </p>
       </form>
 
       <div className="hero-form-alt">
-        <span>Rather talk it through first?</span>
-        <Link href="/book">
-          <i className="fa-regular fa-calendar-check" aria-hidden="true"></i>
-          Book a short call
+        <span>Rather just talk?</span>
+        <Link href={site.phoneHref}>
+          <i className="fa-solid fa-phone" aria-hidden="true"></i>
+          {site.phone}
         </Link>
       </div>
     </div>

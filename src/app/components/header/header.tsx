@@ -44,8 +44,8 @@ const Header: React.FC = (): JSX.Element => {
           </div>
           <div className="outer-box">
             <div className="header-btn d-none d-xl-block">
-              <Link className="header-btn-main" href="/sign-up">
-                <span className="header-theme-btn">Claim my territory</span>
+              <Link className="header-btn-main" href="/contact">
+                <span className="header-theme-btn">Free estimate</span>
                 <span className="header-btn-arrow-right">
                   <i className="fa-regular fa-arrow-right"></i>
                 </span>

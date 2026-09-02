@@ -5,9 +5,8 @@ import Link from "next/link";
 import CountUp from "../../components/elements/CountUp";
 
 /**
- * Uses the template's About composition: image left, title right, and the
- * offset-panel figure box overlapping into the image column. The figure is the
- * deck's own number — three quotes already in before you call.
+ * The argument for calling now rather than next year, built on the template's
+ * About composition with the offset figure panel.
  */
 const Problem = () => {
   return (
@@ -18,10 +17,10 @@ const Problem = () => {
             <div className="inner-column">
               <figure className="image-1 about-style-img-1 wow">
                 <AppImage
-                  src="/assets/images/brand/exclusive-vs-shared.svg"
-                  alt="One shared lead split between five contractors, against one exclusive lead"
-                  width={640}
-                  height={520}
+                  src="/assets/images/photos/asphalt-crack.jpg"
+                  alt="A crack running through an asphalt surface"
+                  width={733}
+                  height={1100}
                 />
               </figure>
             </div>
@@ -35,47 +34,49 @@ const Problem = () => {
               <div className="sec-title">
                 <span className="sub-title">
                   <i className="fa-solid fa-circle-dot" aria-hidden="true"></i>
-                  The problem
+                  Why it matters
                 </span>
                 <h2>
-                  The problem with the leads <br />
-                  you&apos;re getting now
+                  A crack is not a crack. <br />
+                  It&apos;s a route for water.
                 </h2>
               </div>
 
               <p className="lead-para problem-lead">
-                Most lead sources sell the same homeowner or property manager to
-                every paver in the county. By the time you call, they&apos;ve had
-                three quotes and they&apos;re shopping on price. You end up paying
-                to chase people who have already picked someone else.
+                Water gets into the crack, down into the base, and freezes. The
+                freeze lifts the asphalt, the crack widens, and the next thaw
+                takes a piece of the surface with it. That is how a job that
+                would have been a morning of crack sealing turns into
+                resurfacing the whole driveway.
               </p>
 
               <div className="about-icon-box">
                 <div className="about-count">
                   <div className="count-box">
                     <span className="count-text">
-                      <CountUp end={3} />
+                      <CountUp end={1} />
                     </span>
+                    <span className="plus">/4</span>
                   </div>
                   <h6 className="counter-title">
-                    Quotes already in before you call
+                    The cost of sealing versus replacing
                   </h6>
                 </div>
                 <div className="about-content">
                   <p>
-                    Paving Pros was built to fix that. When a property owner in
-                    your territory asks for a paving quote, the lead goes to you
-                    and nobody else.
+                    Maintenance is the cheapest work we do, and the work that
+                    saves you the most. Get it looked at while it is still
+                    cracks.
                   </p>
                   <Link
                     className="theme-btn-main border-style-btn"
-                    href="/how-it-works"
+                    href="/services/crack-filling-and-repair"
                   >
                     <span className="theme-btn-arrow-left theme-bg theme-color-white">
                       <i className="fa-solid fa-arrow-left"></i>
                     </span>
                     <span className="theme-btn theme-bg theme-color-white">
-                      See how it works
+                      Crack filling and repair
                     </span>
                     <span className="theme-btn-arrow-right theme-bg theme-color-white">
                       <i className="fa-solid fa-arrow-right"></i>

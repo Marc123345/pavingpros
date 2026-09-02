@@ -20,11 +20,12 @@ const Hero = () => {
         <div className="row pp-hero-row align-items-center">
           <div className="col-xl-7 col-lg-6 col-12">
             <div className="pp-hero-copy">
-              <span className="pp-hero-eyebrow">For paving contractors</span>
+              <span className="pp-hero-eyebrow">
+                Asphalt paving, sealcoating and repair
+              </span>
               <h1 className="pp-hero-title">
-                Paving leads, sent to{" "}
-                <span className="pp-hero-boxed">one contractor</span> per
-                territory.
+                A driveway you stop{" "}
+                <span className="pp-hero-boxed">thinking about</span>.
                 <span className="pp-hero-payoff">
                   <span className="pp-hero-arrow" aria-hidden="true">
                     <AppImage
@@ -34,9 +35,7 @@ const Hero = () => {
                       height={60}
                     />
                   </span>
-                  <span className="pp-hero-accent">
-                    Yours, if you claim it first.
-                  </span>
+                  <span className="pp-hero-accent">Paved to last.</span>
                 </span>
               </h1>
             </div>

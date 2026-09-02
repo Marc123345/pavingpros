@@ -1,27 +1,19 @@
 import React from "react";
+import { services } from "../../../lib/services";
 
-/**
- * Scrolling services band — the template's marquee treatment. Every word here
- * is a service already named in the copy deck; it states no new claim, it just
- * says out loud what kind of work lands in a territory.
- */
-const services = [
-  "Asphalt paving",
-  "Sealcoating",
-  "Resurfacing",
-  "Crack filling",
-  "Line striping",
-  "Concrete",
-  "Grading",
+/** Scrolling band of what we actually do. */
+const labels = [
+  ...services.map((s) => s.title),
   "Driveways",
   "Parking lots",
+  "Private roads",
 ];
 
 const Group = ({ hidden = false }: { hidden?: boolean }) => (
   <div className="marquee-group" aria-hidden={hidden || undefined}>
-    {services.map((service) => (
-      <div className="text" key={service}>
-        <h2 className="title">{service}</h2>
+    {labels.map((label) => (
+      <div className="text" key={label}>
+        <h2 className="title">{label}</h2>
         <span className="marquee-dot" aria-hidden="true" />
       </div>
     ))}

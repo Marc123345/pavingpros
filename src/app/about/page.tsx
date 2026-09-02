@@ -9,9 +9,9 @@ import WhoWeWorkWith from "../section/about/WhoWeWorkWith";
 import ClosingCta from "../section/shared/ClosingCta";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Paving Pros | Built by People Who Generate Paving Leads" },
+  title: { absolute: "About Paving Pros | Asphalt Paving Contractors" },
   description:
-    "Paving Pros was built by a team that has run lead generation for paving contractors across the US. Here's why we started a directory.",
+    "Who we are, how we work, and why we spend so long on the part of the job you never see.",
 };
 
 export default function AboutPage(): JSX.Element {
@@ -21,16 +21,22 @@ export default function AboutPage(): JSX.Element {
         eyebrow="About"
         headline={
           <>
-            We&apos;ve spent years generating leads for paving contractors.{" "}
-            <span>This is what we built with what we learned.</span>
+            We spend the longest on the part of the job{" "}
+            <span>you never see.</span>
           </>
         }
+        subhead="A paving crew that digs the base properly, prices it in writing, and leaves the site clean."
       />
       <Origin />
       <Beliefs />
       <Team />
       <WhoWeWorkWith />
-      <ClosingCta headline="Want your area?" />
+      <ClosingCta
+        headline="Get a free estimate."
+        body="We come out, measure it, and put a price in writing. No fee, no obligation."
+        buttonLabel="Get my free estimate"
+        href="/contact"
+      />
     </LayoutWrapper>
   );
 }

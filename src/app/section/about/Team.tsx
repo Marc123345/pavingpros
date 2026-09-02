@@ -13,9 +13,9 @@ const Team = () => {
             <div className="sec-title text-center">
               <span className="sub-title justify-content-center">
                 <AppImage src="/assets/images/main-home/sub-title-shape.svg" alt="" width={16} height={16} />
-                The team
+                The crew
               </span>
-              <h2 className="text-reveal-anim">Who you&apos;ll be working with</h2>
+              <h2>Who turns up</h2>
             </div>
           </div>
         </div>
