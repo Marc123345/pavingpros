@@ -22,8 +22,22 @@ const Hero = () => {
             <div className="pp-hero-copy">
               <span className="pp-hero-eyebrow">For paving contractors</span>
               <h1 className="pp-hero-title">
-                Paving leads, sent to one contractor per territory.{" "}
-                <span>Yours, if you claim it first.</span>
+                Paving leads, sent to{" "}
+                <span className="pp-hero-boxed">one contractor</span> per
+                territory.
+                <span className="pp-hero-payoff">
+                  <span className="pp-hero-arrow" aria-hidden="true">
+                    <AppImage
+                      src="/assets/images/brand/hero-arrow.svg"
+                      alt=""
+                      width={200}
+                      height={60}
+                    />
+                  </span>
+                  <span className="pp-hero-accent">
+                    Yours, if you claim it first.
+                  </span>
+                </span>
               </h1>
             </div>
           </div>

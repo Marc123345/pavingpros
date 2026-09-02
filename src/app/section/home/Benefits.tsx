@@ -1,12 +1,16 @@
-"use client";
-import AppImage from "../../components/elements/AppImage";
 import React from "react";
 
+/**
+ * The template's Mission panel aesthetic — one bordered block divided by
+ * hairlines rather than a row of separate cards — with the headline promise
+ * given a full-width feature cell. All five benefits from the copy deck.
+ */
 const benefits = [
   {
     icon: "fa-solid fa-map-location-dot",
     title: "Exclusive territory",
     text: "You choose the area you actually want to work. Once it's yours, no other contractor gets leads from it. If a competitor tries to sign up in your territory, they go on a waitlist.",
+    feature: true,
   },
   {
     icon: "fa-solid fa-mobile-screen-button",
@@ -35,29 +39,27 @@ const Benefits = () => {
     <section className="benefits-section section-padding">
       <div className="auto-container">
         <div className="row justify-content-center">
-          <div className="col-lg-8 wow fadeInUp">
+          <div className="col-lg-8 wow">
             <div className="sec-title text-center">
               <span className="sub-title justify-content-center">
-                <AppImage src="/assets/images/main-home/sub-title-shape.svg" alt="" width={16} height={16} />
+                <i className="fa-solid fa-circle-dot" aria-hidden="true"></i>
                 Membership
               </span>
-              <h2 className="text-reveal-anim">
-                What you get as a Paving Pros member
-              </h2>
+              <h2>What you get as a Paving Pros member</h2>
             </div>
           </div>
         </div>
-        <div className="row g-4">
-          {benefits.map((item, index) => (
+
+        <div className="membership-grid wow">
+          {benefits.map((item) => (
             <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay={`${(index % 3) * 200}ms`}
+              className={`membership-cell ${item.feature ? "membership-cell--feature" : ""}`}
               key={item.title}
             >
-              <div className="benefit-card">
-                <div className="benefit-icon">
-                  <i className={item.icon} aria-hidden="true"></i>
-                </div>
+              <span className="membership-icon" aria-hidden="true">
+                <i className={item.icon}></i>
+              </span>
+              <div className="membership-body">
                 <h4 className="title">{item.title}</h4>
                 <p>{item.text}</p>
               </div>

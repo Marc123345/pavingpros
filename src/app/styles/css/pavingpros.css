@@ -77,7 +77,40 @@
   margin: 0;
   max-width: 15ch;
 }
-.pp-hero-title span { color: var(--pp-orange); }
+.pp-hero-accent {
+  color: var(--pp-orange);
+  display: inline;
+}
+
+/* Layout 3's headline devices: an outlined word and an arrow leading into the
+   payoff line. */
+.pp-hero-boxed {
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 0 16px 6px;
+  white-space: nowrap;
+  line-height: 1;
+}
+/* On desktop the payoff takes its own line so the arrow leads into it, the way
+   the template's layout-3 hero does. */
+.pp-hero-payoff { display: inline; }
+@media (min-width: 992px) {
+  .pp-hero-payoff { display: block; margin-top: 0.08em; }
+}
+.pp-hero-arrow {
+  display: inline-block;
+  width: clamp(78px, 8vw, 132px);
+  margin: 0 22px 0 0;
+  position: relative;
+  top: -0.12em;
+  vertical-align: middle;
+}
+.pp-hero-arrow img { width: 100%; height: auto; display: block; }
+@media (max-width: 575.98px) {
+  .pp-hero-boxed { padding: 0 10px 4px; border-width: 1.5px; }
+  .pp-hero-arrow { width: 62px; margin: 0 12px 0 2px; }
+}
 /* ---------- Hero sign-up card ---------- */
 .hero-form-card {
   position: relative;
@@ -284,42 +317,82 @@
   .page-hero-title { font-size: 32px; }
 }
 
-/* ---------- Benefit cards ---------- */
+/* ---------- Membership panel ----------
+   The template's Mission aesthetic: one bordered block split by hairlines,
+   not a row of separate cards. The headline promise takes a full-width cell.
+   ------------------------------------------------------------------------ */
 .benefits-section { background-color: var(--pp-navy); }
 
-.benefit-card {
-  height: 100%;
-  padding: 40px 34px;
-  border: 1px solid var(--pp-line);
-  border-radius: 20px;
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--pp-line-strong);
+  border-radius: 22px;
+  overflow: hidden;
   background: var(--pp-surface);
-  transition: 0.35s;
 }
-.benefit-card:hover {
+.membership-cell {
+  display: flex;
+  gap: 22px;
+  padding: 38px 36px;
+  border-top: 1px solid var(--pp-line);
+  border-left: 1px solid var(--pp-line);
+  transition: background 0.35s ease;
+}
+/* no double rule against the outer border */
+.membership-cell:nth-child(-n + 1) { border-top: 0; }
+.membership-cell:nth-child(odd) { border-left: 0; }
+.membership-cell:hover { background: rgba(255, 255, 255, 0.03); }
+
+.membership-cell--feature {
+  grid-column: 1 / -1;
+  border-top: 0;
+  border-left: 0;
+  padding: 44px 36px;
+  background: linear-gradient(100deg, rgba(247, 147, 30, 0.1) 0%, rgba(247, 147, 30, 0) 62%);
+}
+.membership-cell--feature .title { font-size: 25px; }
+.membership-cell--feature p { max-width: 62ch; font-size: 16.5px; }
+.membership-cell--feature .membership-icon {
+  background: var(--pp-orange);
   border-color: var(--pp-orange);
-  transform: translateY(-6px);
 }
-.benefit-icon {
-  width: 64px;
-  height: 64px;
+.membership-cell--feature .membership-icon i { color: var(--pp-ink); }
+
+.membership-icon {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  background: rgba(247, 147, 30, 0.12);
-  margin-bottom: 26px;
+  border: 1px solid var(--pp-line-strong);
+  border-radius: 50%;
+  transition: 0.35s;
 }
-.benefit-icon img { max-width: 34px; height: auto; }
-.benefit-card .title {
+.membership-icon i { color: var(--pp-orange); font-size: 20px; }
+
+.membership-body .title {
   color: #fff;
-  font-size: 21px;
-  margin-bottom: 14px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-.benefit-card p {
+.membership-body p {
   color: var(--text-color);
   margin: 0;
-  font-size: 16px;
+  font-size: 15.5px;
   line-height: 1.75;
+}
+
+@media (max-width: 991.98px) {
+  .membership-grid { grid-template-columns: 1fr; }
+  .membership-cell,
+  .membership-cell--feature { border-left: 0; }
+  .membership-cell:not(:first-child) { border-top: 1px solid var(--pp-line); }
+}
+@media (max-width: 575.98px) {
+  .membership-cell,
+  .membership-cell--feature { padding: 30px 22px; gap: 18px; }
 }
 
 /* ---------- Who it's for ---------- */
@@ -1354,4 +1427,35 @@
   }
   .work-single-box.pp-work-row .work-content p { margin-right: 0; }
   .work-single-box.pp-work-row .work-img { width: 100%; }
+}
+
+/* ---------- Problem section ----------
+   Reuses the template's .about-icon-box: a navy panel with an offset orange
+   panel behind it, overlapping back into the image column.
+   ------------------------------------------------------------------------ */
+.problem-section { background-color: var(--pp-ink); padding: 120px 0; }
+.problem-section .image-column .inner-column { padding-right: 40px; }
+.problem-section .about-style-img-1 { margin: 0; }
+.problem-section .about-style-img-1 img { width: 100%; height: auto; }
+.problem-section .problem-lead { margin-bottom: 34px; max-width: 52ch; }
+.problem-section .about-icon-box { gap: 40px; padding: 44px 40px; }
+.problem-section .about-icon-box .about-count .count-text { font-size: 76px; }
+.problem-section .about-icon-box .counter-title {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 14px 0 0;
+  max-width: 15ch;
+}
+.problem-section .about-icon-box .about-content p {
+  color: var(--text-color);
+  margin-bottom: 24px;
+  line-height: 1.75;
+}
+@media (max-width: 1399.98px) {
+  .problem-section .about-icon-box { margin-left: 0; width: auto; }
+}
+@media (max-width: 991.98px) {
+  .problem-section { padding: 90px 0; }
+  .problem-section .image-column .inner-column { padding-right: 0; margin-bottom: 44px; }
 }
