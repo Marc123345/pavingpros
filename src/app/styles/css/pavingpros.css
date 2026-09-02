@@ -1276,3 +1276,23 @@
 @media (max-width: 991.98px) {
   .main-header .main-menu { display: none !important; }
 }
+
+/* ---------- Header alignment ----------
+   Every section on the site sits in .auto-container (max-width 1350px, 15px
+   gutter, centred). The header did not — the template gave .header-lower its own
+   horizontal padding, redefined at each breakpoint (50px / 35px / 20px /
+   10px !important), so the logo sat ~60px left of the page's content edge and
+   the CTA hung ~60px past its right edge. Put the header on the same grid.
+   ------------------------------------------------------------------------ */
+.main-header .header-lower {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.main-header .header-lower .main-box {
+  max-width: var(--container-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
