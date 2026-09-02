@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="700" viewBox="0 0 760 700" fill="none" role="img" aria-label="Territory map with one claimed area">
+  <defs>
+    <linearGradient id="claim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6600" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ff8534" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ff6600" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M46 0H0V46" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <circle cx="380" cy="330" r="330" fill="url(#glow)"/>
+  <rect x="30" y="40" width="700" height="600" rx="26" fill="url(#grid)"/>
+
+  <!-- neighbouring, unclaimed territories -->
+  <g stroke="#ffffff" stroke-opacity="0.16" fill="#ffffff" fill-opacity="0.03" stroke-width="1.5">
+    <path d="M96 132 L262 106 L296 232 L150 268 Z"/>
+    <path d="M296 232 L452 206 L500 300 L338 336 Z"/>
+    <path d="M500 300 L648 268 L676 400 L534 428 Z"/>
+    <path d="M150 268 L296 232 L338 336 L188 372 Z"/>
+    <path d="M188 372 L338 336 L360 452 L214 486 Z"/>
+    <path d="M360 452 L534 428 L560 546 L392 574 Z"/>
+    <path d="M214 486 L360 452 L392 574 L246 596 Z"/>
+    <path d="M452 206 L616 178 L648 268 L500 300 Z"/>
+  </g>
+
+  <!-- the claimed territory -->
+  <path d="M338 336 L500 300 L534 428 L360 452 Z" fill="url(#claim)" stroke="#ff6600" stroke-width="3"/>
+
+  <!-- pin -->
+  <g transform="translate(413 340)">
+    <path d="M27 26.6C27 41.4 13.5 56 13.5 56S0 41.4 0 26.6A13.5 13.5 0 0 1 27 26.6Z" fill="#ff6600"/>
+    <circle cx="13.5" cy="26" r="5.4" fill="#001529"/>
+  </g>
+
+  <!-- lead pings travelling to the claimed area -->
+  <g stroke="#ff6600" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="6 8" fill="none">
+    <path d="M180 160 C 280 220, 340 280, 420 350"/>
+    <path d="M640 210 C 560 260, 480 300, 428 348"/>
+    <path d="M300 560 C 340 490, 390 420, 424 362"/>
+  </g>
+  <g fill="#ff6600">
+    <circle cx="180" cy="160" r="5"/>
+    <circle cx="640" cy="210" r="5"/>
+    <circle cx="300" cy="560" r="5"/>
+  </g>
+</svg>

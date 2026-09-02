@@ -1,0 +1,9 @@
+/* Background image utilities still in use by Paving Pros. */
+
+.bg-img-footer {
+  background-image: url("/assets/images/home-1/footer-bg.jpg");
+}
+
+.bg-img-home4-faq {
+  background-image: url("/assets/images/home-4/faq-bg.jpg");
+}

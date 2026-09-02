@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" fill="none" role="img" aria-label="A shared lead split between five contractors versus one exclusive lead">
+  <defs>
+    <linearGradient id="pp-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shared -->
+  <rect x="0" y="0" width="640" height="238" rx="20" fill="url(#pp-card)" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="30" y="44" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.6" fill="#8fa0ae">EVERYWHERE ELSE</text>
+  <g>
+    <rect x="30" y="66" width="150" height="52" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="105" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff">1 lead</text>
+  </g>
+  <g stroke="#8fa0ae" stroke-opacity="0.45" stroke-width="1.5" fill="none">
+    <path d="M180 92 C 240 92, 250 168, 300 172"/>
+    <path d="M180 92 C 250 92, 260 168, 372 172"/>
+    <path d="M180 92 C 260 92, 280 168, 444 172"/>
+    <path d="M180 92 C 270 92, 300 168, 516 172"/>
+    <path d="M180 92 C 280 92, 320 168, 588 172"/>
+  </g>
+  <g fill="#8fa0ae" fill-opacity="0.25" stroke="#8fa0ae" stroke-opacity="0.5">
+    <circle cx="300" cy="188" r="17"/>
+    <circle cx="372" cy="188" r="17"/>
+    <circle cx="444" cy="188" r="17"/>
+    <circle cx="516" cy="188" r="17"/>
+    <circle cx="588" cy="188" r="17"/>
+  </g>
+  <text x="444" y="228" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="13" fill="#8fa0ae">5 contractors, 1 price war</text>
+
+  <!-- exclusive -->
+  <rect x="0" y="266" width="640" height="238" rx="20" fill="url(#pp-card)" stroke="#ff6600" stroke-opacity="0.5"/>
+  <text x="30" y="310" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.6" fill="#ff6600">PAVING PROS</text>
+  <g>
+    <rect x="30" y="332" width="150" height="52" rx="12" fill="#ff6600" fill-opacity="0.16" stroke="#ff6600" stroke-opacity="0.7"/>
+    <text x="105" y="364" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff">1 lead</text>
+  </g>
+  <path d="M180 358 C 300 358, 380 400, 470 412" stroke="#ff6600" stroke-width="2.5" fill="none"/>
+  <circle cx="500" cy="414" r="30" fill="#ff6600"/>
+  <path d="M488 414 l8 9 16 -18" stroke="#001529" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="474" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="13" fill="#ffffff" fill-opacity="0.75">You. Nobody else.</text>
+</svg>
