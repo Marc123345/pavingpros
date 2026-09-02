@@ -23,10 +23,10 @@ const Footer = () => {
                 <div className="logo">
                   <Link href="/">
                     <AppImage
-                      src="/assets/images/logo/paving-pros-logo.svg"
+                      src="/assets/images/logo/paving-pros-logo-horizontal-on-dark.svg"
                       alt="Paving Pros"
-                      width={200}
-                      height={42}
+                      width={210}
+                      height={60}
                     />
                   </Link>
                 </div>

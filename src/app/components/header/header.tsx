@@ -11,10 +11,10 @@ import { site } from "../../../lib/site";
 const Logo = () => (
   <Link href="/">
     <AppImage
-      src="/assets/images/logo/paving-pros-logo.svg"
+      src="/assets/images/logo/paving-pros-logo-horizontal-on-dark.svg"
       alt="Paving Pros"
-      width={200}
-      height={42}
+      width={190}
+      height={54}
       priority
     />
   </Link>

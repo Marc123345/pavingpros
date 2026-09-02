@@ -1,11 +1,11 @@
 /* ============================================================
    Paving Pros — custom styles layered on the Nexella template.
-   Palette: #ff6600 (orange) / #001529 (navy) / #001019 (ink)
+   Palette: #f7931e (orange) / #001529 (navy) / #001019 (ink)
    ============================================================ */
 
 :root {
-  --pp-orange: #ff6600;
-  --pp-orange-soft: #ff8534;
+  --pp-orange: #f7931e;
+  --pp-orange-soft: #ffb347;
   --pp-navy: #001529;
   --pp-ink: #001019;
   --pp-line: rgba(255, 255, 255, 0.1);
@@ -24,7 +24,7 @@
   padding: 190px 0 120px;
   background-color: var(--pp-ink);
   background-image:
-    radial-gradient(900px 640px at 76% 40%, rgba(255, 102, 0, 0.15) 0%, rgba(255, 102, 0, 0) 70%),
+    radial-gradient(900px 640px at 76% 40%, rgba(247, 147, 30, 0.15) 0%, rgba(247, 147, 30, 0) 70%),
     radial-gradient(720px 520px at 6% 6%, rgba(0, 61, 112, 0.5) 0%, rgba(0, 21, 41, 0) 72%),
     linear-gradient(162deg, #001c33 0%, #001019 64%);
 }
@@ -78,52 +78,6 @@
   max-width: 15ch;
 }
 .pp-hero-title span { color: var(--pp-orange); }
-.pp-hero-sub {
-  color: var(--text-color);
-  font-size: 18px;
-  line-height: 1.65;
-  margin: 26px 0 0;
-  max-width: 52ch;
-}
-
-.pp-hero-points {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0 0;
-}
-.pp-hero-points li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.86);
-  font-family: var(--heading-font-family);
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 13px;
-}
-.pp-hero-points li:last-child { margin-bottom: 0; }
-.pp-hero-points i {
-  flex: 0 0 auto;
-  margin-top: 4px;
-  font-size: 12px;
-  color: var(--pp-orange);
-}
-
-.pp-hero-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 32px;
-  padding-bottom: 5px;
-  color: #fff;
-  font-family: var(--heading-font-family);
-  font-weight: 500;
-  border-bottom: 1px solid var(--pp-line-strong);
-  transition: 0.3s;
-}
-.pp-hero-link:hover { color: var(--pp-orange); border-color: var(--pp-orange); }
-.pp-hero-link i { font-size: 13px; }
-
 /* ---------- Hero sign-up card ---------- */
 .hero-form-card {
   position: relative;
@@ -243,7 +197,6 @@
 }
 @media (max-width: 575.98px) {
   .pp-hero { padding: 140px 0 70px; }
-  .pp-hero-sub { font-size: 16.5px; }
   .hero-form-grid { grid-template-columns: 1fr; }
   .hero-form-card { padding: 28px 20px 24px; }
 }
@@ -276,7 +229,7 @@
   padding: 200px 0 110px;
   background-color: var(--pp-ink);
   background-image:
-    radial-gradient(760px 420px at 82% 30%, rgba(255, 102, 0, 0.14) 0%, rgba(255, 102, 0, 0) 70%),
+    radial-gradient(760px 420px at 82% 30%, rgba(247, 147, 30, 0.14) 0%, rgba(247, 147, 30, 0) 70%),
     linear-gradient(165deg, #001c33 0%, #001019 70%);
 }
 .page-hero::after {
@@ -353,7 +306,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: rgba(255, 102, 0, 0.12);
+  background: rgba(247, 147, 30, 0.12);
   margin-bottom: 26px;
 }
 .benefit-icon img { max-width: 34px; height: auto; }
@@ -571,7 +524,7 @@
   gap: 12px;
   flex-wrap: wrap;
   padding: 22px 30px;
-  background: rgba(255, 102, 0, 0.1);
+  background: rgba(247, 147, 30, 0.1);
   border-bottom: 1px solid var(--pp-line);
 }
 .lead-badge {
@@ -623,7 +576,7 @@
   padding: 54px 48px;
   border: 1px solid var(--pp-line-strong);
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 102, 0, 0.09) 0%, rgba(255, 255, 255, 0.02) 45%);
+  background: linear-gradient(180deg, rgba(247, 147, 30, 0.09) 0%, rgba(255, 255, 255, 0.02) 45%);
   text-align: left;
 }
 .pp-price-badge {
@@ -767,7 +720,7 @@
   height: 110px;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(255, 102, 0, 0.12);
+  background: rgba(247, 147, 30, 0.12);
 }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; }
 .team-info .title { color: #fff; font-size: 20px; margin-bottom: 4px; }
@@ -831,7 +784,7 @@
 }
 .signup-card select {
   appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, #ff6600 50%), linear-gradient(135deg, #ff6600 50%, transparent 50%);
+  background-image: linear-gradient(45deg, transparent 50%, #f7931e 50%), linear-gradient(135deg, #f7931e 50%, transparent 50%);
   background-position: calc(100% - 22px) 25px, calc(100% - 16px) 25px;
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
@@ -871,7 +824,7 @@
 .checkbox-pill input:focus-visible + span { outline: 2px solid #fff; outline-offset: 2px; }
 
 .form-note { color: rgba(255, 255, 255, 0.5); font-size: 14px; margin: 22px 0 0; }
-.form-error { color: #ff8534; margin-bottom: 16px; }
+.form-error { color: #ffb347; margin-bottom: 16px; }
 @media (max-width: 767.98px) {
   .signup-card { padding: 34px 24px; }
 }
@@ -953,7 +906,7 @@
   overflow: hidden;
   background-color: var(--pp-ink);
   background-image:
-    radial-gradient(900px 620px at 78% 42%, rgba(255, 102, 0, 0.16) 0%, rgba(255, 102, 0, 0) 70%),
+    radial-gradient(900px 620px at 78% 42%, rgba(247, 147, 30, 0.16) 0%, rgba(247, 147, 30, 0) 70%),
     radial-gradient(700px 500px at 8% 8%, rgba(0, 61, 112, 0.55) 0%, rgba(0, 21, 41, 0) 72%),
     linear-gradient(160deg, #001c33 0%, #001019 62%);
 }
@@ -1029,13 +982,13 @@
 /* ---------- Section grounds ---------- */
 .pp-steps-bg {
   background-color: var(--pp-ink);
-  background-image: radial-gradient(900px 500px at 50% 0%, rgba(255, 102, 0, 0.09) 0%, rgba(255, 102, 0, 0) 70%);
+  background-image: radial-gradient(900px 500px at 50% 0%, rgba(247, 147, 30, 0.09) 0%, rgba(247, 147, 30, 0) 70%);
 }
 
 /* Accent sections: solid brand orange, no leftover template art */
 .why-choose-us-section-1.theme-color1-bg,
 .who-we-work-section.theme-color1-bg {
-  background-image: linear-gradient(135deg, #ff6600 0%, #ff8534 100%);
+  background-image: linear-gradient(135deg, #f7931e 0%, #ffb347 100%);
 }
 
 /* ---------- Testimonial quote cards ---------- */
@@ -1152,7 +1105,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: rgba(255, 102, 0, 0.12);
+  background: rgba(247, 147, 30, 0.12);
   margin-bottom: 22px;
 }
 .cover-icon i { color: var(--pp-orange); font-size: 22px; }

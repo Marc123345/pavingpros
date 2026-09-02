@@ -1,9 +1,7 @@
 "use client";
 import AppImage from "../../components/elements/AppImage";
 import React from "react";
-import Link from "next/link";
 import HeroForm from "./HeroForm";
-import { setupWindow } from "../../../lib/site";
 
 const Hero = () => {
   return (
@@ -27,32 +25,6 @@ const Hero = () => {
                 Paving leads, sent to one contractor per territory.{" "}
                 <span>Yours, if you claim it first.</span>
               </h1>
-              <p className="pp-hero-sub">
-                Paving Pros is a directory for paving contractors that does one
-                thing a normal directory doesn&apos;t: it sends every lead in your
-                area to you alone. No shared lists. No racing three other crews
-                to the same driveway.
-              </p>
-
-              <ul className="pp-hero-points">
-                <li>
-                  <i className="fa-solid fa-check" aria-hidden="true"></i>
-                  Exclusive territory, or a waitlist spot
-                </li>
-                <li>
-                  <i className="fa-solid fa-check" aria-hidden="true"></i>
-                  Qualified leads by text and email, in real time
-                </li>
-                <li>
-                  <i className="fa-solid fa-check" aria-hidden="true"></i>
-                  No contract. Setup within {setupWindow}
-                </li>
-              </ul>
-
-              <Link href="/how-it-works" className="pp-hero-link">
-                See how it works
-                <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </Link>
             </div>
           </div>
 

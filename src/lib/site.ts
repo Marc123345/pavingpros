@@ -37,9 +37,6 @@ export const site = {
   },
 };
 
-/** Setup speed promised in the hero trust line. TODO: verify. */
-export const setupWindow = "24 hours";
-
 /** Membership price. TODO: set real price before launch. */
 export const pricing = {
   price: "[PRICE]",

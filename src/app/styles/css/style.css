@@ -27,13 +27,13 @@ License: copyright commercial
   inherits: false;
 }
 :root {
-  --theme-color1: #ff6600;
+  --theme-color1: #f7931e;
   --theme-color2: #001529;
-  --theme-color3: #ff8534;
+  --theme-color3: #ffb347;
   --theme-color4: #001019;
-  --theme-color1-rgb: 255, 102, 0;
+  --theme-color1-rgb: 247, 147, 30;
   --theme-color2-rgb: 0, 21, 41;
-  --theme-color3-rgb: 255, 133, 52;
+  --theme-color3-rgb: 255, 179, 71;
   --theme-color4-rgb: 0, 16, 25;
   --theme-color1-text-color: #001019;
   --theme-color2-text-color: #fff;
@@ -50,7 +50,7 @@ License: copyright commercial
   --text-color: #a8b6c2;
   --headings-color: #fff;
   --link-color: #352f27;
-  --link-hover-color: #ff6600;
+  --link-hover-color: #f7931e;
   --body-font-family: "Noto Sans", sans-serif;
   --heading-font-family: "Plus Jakarta Sans", sans-serif;
   --body-font-size: 16px;
@@ -8030,7 +8030,7 @@ Start sass Icon Single Box
   right: 0;
   width: 894px;
   height: 1px;
-  background-image: repeating-linear-gradient(to right, #ff6600, #ff6600 7px, transparent 4px, transparent 12px);
+  background-image: repeating-linear-gradient(to right, #f7931e, #f7931e 7px, transparent 4px, transparent 12px);
 }
 
 .process-single-box {
@@ -8048,7 +8048,7 @@ Start sass Icon Single Box
   left: 50%;
   width: 1.5px;
   height: 29px;
-  background-image: repeating-linear-gradient(to bottom, #ff6600 0 6px, transparent 6px 12px);
+  background-image: repeating-linear-gradient(to bottom, #f7931e 0 6px, transparent 6px 12px);
 }
 .process-single-box .process-thumb {
   position: relative;
@@ -12478,9 +12478,9 @@ Progress Bar
 }
 .pricing-box-items-4 .pricing-header {
   border-bottom: 1px solid transparent;
-  -o-border-image: linear-gradient(90deg, #070707 0%, #ff6600 51.92%, #070707 100%);
-     border-image: -webkit-gradient(linear, left top, right top, from(#070707), color-stop(51.92%, #ff6600), to(#070707));
-     border-image: linear-gradient(90deg, #070707 0%, #ff6600 51.92%, #070707 100%);
+  -o-border-image: linear-gradient(90deg, #070707 0%, #f7931e 51.92%, #070707 100%);
+     border-image: -webkit-gradient(linear, left top, right top, from(#070707), color-stop(51.92%, #f7931e), to(#070707));
+     border-image: linear-gradient(90deg, #070707 0%, #f7931e 51.92%, #070707 100%);
   padding-bottom: 30px;
   border-bottom: 1px solid transparent;
   border-image-slice: 1;

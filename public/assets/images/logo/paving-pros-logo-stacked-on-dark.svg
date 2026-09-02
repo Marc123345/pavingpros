@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="Paving Pros"><title>Paving Pros</title><defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294D"/><stop offset="1" stop-color="#0B1730"/></linearGradient>
+    <linearGradient id="road" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#F7931E"/><stop offset="1" stop-color="#FFB347"/></linearGradient>
+  </defs>
+  <g transform="translate(96 16) scale(1)">
+    <rect width="128" height="128" rx="28" fill="url(#tile)"/>
+    <path d="M42 106 V26 H74 a24 24 0 0 1 0 48 H42" fill="none" stroke="#2A3F6B" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 106 V26 H74 a24 24 0 0 1 0 48 H42" fill="none" stroke="url(#road)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 106 V26 H74 a24 24 0 0 1 0 48 H42" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8"/>
+  </g>
+  <g font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="800" text-anchor="middle">
+    <text x="160" y="222" font-size="60" fill="#FFFFFF" letter-spacing="2">PAVING</text>
+    <text x="160" y="278" font-size="44" fill="#F7931E" letter-spacing="12">PROS</text>
+  </g>
+</svg>

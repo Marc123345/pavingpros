@@ -30,14 +30,14 @@
   <text x="444" y="228" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="13" fill="#8fa0ae">5 contractors, 1 price war</text>
 
   <!-- exclusive -->
-  <rect x="0" y="266" width="640" height="238" rx="20" fill="url(#pp-card)" stroke="#ff6600" stroke-opacity="0.5"/>
-  <text x="30" y="310" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.6" fill="#ff6600">PAVING PROS</text>
+  <rect x="0" y="266" width="640" height="238" rx="20" fill="url(#pp-card)" stroke="#f7931e" stroke-opacity="0.5"/>
+  <text x="30" y="310" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.6" fill="#f7931e">PAVING PROS</text>
   <g>
-    <rect x="30" y="332" width="150" height="52" rx="12" fill="#ff6600" fill-opacity="0.16" stroke="#ff6600" stroke-opacity="0.7"/>
+    <rect x="30" y="332" width="150" height="52" rx="12" fill="#f7931e" fill-opacity="0.16" stroke="#f7931e" stroke-opacity="0.7"/>
     <text x="105" y="364" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff">1 lead</text>
   </g>
-  <path d="M180 358 C 300 358, 380 400, 470 412" stroke="#ff6600" stroke-width="2.5" fill="none"/>
-  <circle cx="500" cy="414" r="30" fill="#ff6600"/>
+  <path d="M180 358 C 300 358, 380 400, 470 412" stroke="#f7931e" stroke-width="2.5" fill="none"/>
+  <circle cx="500" cy="414" r="30" fill="#f7931e"/>
   <path d="M488 414 l8 9 16 -18" stroke="#001529" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="500" y="474" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="13" fill="#ffffff" fill-opacity="0.75">You. Nobody else.</text>
 </svg>

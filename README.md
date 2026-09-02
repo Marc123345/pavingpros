@@ -21,12 +21,16 @@ full form and redirects to `/thank-you`.
 
 ## Brand
 
-Palette taken from pavinglead.com:
+The orange comes from the supplied logo (`#F7931E`, with `#FFB347` as the road
+highlight); the navy is from pavinglead.com. The original build used pavinglead's
+`#ff6600`, but that is a red-orange at 24° hue against the logo's amber at 32°, and
+the two read as different brands sitting next to each other in the header — so the
+palette follows the logo.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--pp-orange` | `#ff6600` | Primary accent, CTAs |
-| `--pp-orange-soft` | `#ff8534` | Gradients, hover |
+| `--pp-orange` | `#f7931e` | Primary accent, CTAs |
+| `--pp-orange-soft` | `#ffb347` | Gradients, hover |
 | `--pp-navy` | `#001529` | Page ground |
 | `--pp-ink` | `#001019` | Alternating sections |
 
@@ -82,9 +86,13 @@ different port if you override the default.
 
 Two kinds:
 
+- **Logo** — `public/assets/images/logo/`. The supplied Paving Pros kit: horizontal
+  (light and on-dark), stacked on-dark, and the icon mark. The site is dark, so the
+  header and footer use `paving-pros-logo-horizontal-on-dark.svg`. The favicon and
+  apple-touch-icon are rasterised from `paving-pros-icon.svg`.
 - **Brand diagrams** — `public/assets/images/brand/`. Purpose-built SVGs in the
   palette: the hero territory map, the exclusive-vs-shared lead routing comparison,
-  and the demand-routing diagram on About. The logo is here too.
+  and the demand-routing diagram on About.
 - **Photography** — `public/assets/images/photos/`. Four Pexels shots (paving crew,
   road roller, aerial parking lot, residential driveway) used on the home page,
   pricing page, and About. Licence and sources are in

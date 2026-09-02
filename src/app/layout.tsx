@@ -14,7 +14,13 @@ export const metadata: Metadata = {
   },
   description:
     "Join the Paving Pros directory and get asphalt, sealcoating, and concrete leads sent straight to your phone. One contractor per territory. No contract, cancel anytime.",
-  icons: { icon: "/assets/images/favicon.png" },
+  icons: {
+    icon: [
+      { url: "/assets/images/logo/paving-pros-icon.svg", type: "image/svg+xml" },
+      { url: "/assets/images/favicon.png", type: "image/png", sizes: "64x64" },
+    ],
+    apple: "/assets/images/logo/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     siteName: "Paving Pros",
