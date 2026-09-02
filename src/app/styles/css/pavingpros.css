@@ -1236,3 +1236,43 @@
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* ---------- Sticky header ----------
+   The template shipped a second, differently-laid-out header (.sticky-header)
+   that swapped in on scroll: the logo moved ~80px right, the menu jumped ~450px
+   right, and the CTA disappeared. That clone is gone. The one real header now
+   pins itself instead, so nothing moves and the CTA stays put.
+   ------------------------------------------------------------------------ */
+.main-header.fixed-header .header-lower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: rgba(0, 16, 25, 0.92);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--pp-line);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+  animation: pp-header-drop 0.35s ease both;
+}
+@keyframes pp-header-drop {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .main-header.fixed-header .header-lower { animation: none; }
+}
+
+/* The template hid the desktop menu from 992px but only showed the hamburger
+   below 992px, and re-showed the menu from 1022px — leaving 992–1021px with no
+   navigation at all. One breakpoint for both, matching .mobile-nav-toggler. */
+@media (min-width: 992px) {
+  .main-header .main-menu { display: block !important; }
+  .main-header .mobile-nav-toggler { display: none !important; }
+}
+@media (max-width: 991.98px) {
+  .main-header .main-menu { display: none !important; }
+}

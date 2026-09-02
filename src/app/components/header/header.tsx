@@ -93,26 +93,6 @@ const Header: React.FC = (): JSX.Element => {
           </ul>
         </nav>
       </div>
-
-      <div className={`sticky-header ${scroll ? "fixed-header animated slideInDown" : ""}`}>
-        <div className="auto-container">
-          <div className="inner-container">
-            <div className="logo">
-              <Logo />
-            </div>
-            <div className="nav-outer">
-              <nav className="main-menu">
-                <div className="navbar-collapse show collapse clearfix">
-                  <NavLinks extraClassName="clearfix" />
-                </div>
-              </nav>
-              <div className="mobile-nav-toggler" onClick={handleOpen}>
-                <span className="icon lnr-icon-bars"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </header>
   );
 };
