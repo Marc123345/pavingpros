@@ -15,6 +15,10 @@ free for commercial use, no attribution required, no permission needed.
 | `paver-truck.jpg` | https://www.pexels.com/photo/8995385/ |
 | `asphalt-crack.jpg` | https://www.pexels.com/photo/9963248/ |
 | `asphalt-texture.jpg` | https://www.pexels.com/photo/4040619/ |
+| `work-zone.jpg` | https://www.pexels.com/photo/14823463/ |
+
+`roller-fresh-asphalt.jpg` is not from Pexels — it came from the client's own
+ImageKit account (`ik.imagekit.io/qcvroy8xpd`), so it is theirs to use.
 
 These are stock placeholders. Replace them with real job-site photos from member
 contractors as soon as any are available — a directory selling exclusivity is
