@@ -102,6 +102,20 @@ The template's own photos were grey `860 x 600` placeholders, so none of them ar
 used. Replace the Pexels stock with real member job-site photos as soon as any are
 available.
 
+## Template devices reused
+
+The template's full stylesheet is still in the project, so several of its section
+treatments are available with no new CSS and are already in the brand palette:
+
+- **Services marquee** (`.marquee`) — the scrolling band between the benefits and
+  the steps. Only names services the copy deck already lists; it makes no new claim.
+- **Editorial numbered rows** (`.work-single-box`) — "What lands in your territory"
+  on the home page: ghost number, copy, photo. Stacks on mobile.
+- **Counting stats** — the stats bar animates its figures into view. `Stats` parses
+  each value, so `1,200+` counts up while `[X]` and `Real time` render as written.
+  The counter shows its final value first and only animates on top, so a figure is
+  never blank.
+
 ## Two template mechanics that were removed
 
 Both were replaced rather than patched, because both could leave a visitor looking

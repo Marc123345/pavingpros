@@ -4,7 +4,9 @@ import LayoutWrapper from "./LayoutWrapper";
 import Hero from "./section/home/Hero";
 import Problem from "./section/home/Problem";
 import Benefits from "./section/home/Benefits";
+import Marquee from "./section/home/Marquee";
 import Steps from "./section/home/Steps";
+import Work from "./section/home/Work";
 import WhoFor from "./section/home/WhoFor";
 import Testimonials from "./section/home/Testimonials";
 import Stats from "./section/home/Stats";
@@ -22,8 +24,10 @@ export default function Home(): JSX.Element {
       <Hero />
       <Problem />
       <Benefits />
+      <Marquee />
       <Steps />
       <WhoFor />
+      <Work />
       <Testimonials />
       <Stats />
       <ClosingCta

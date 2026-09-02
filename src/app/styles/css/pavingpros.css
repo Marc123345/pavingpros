@@ -1249,3 +1249,109 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+/* ---------- Services marquee ----------
+   Reuses the template's .marquee scroll mechanics. The template drew a large
+   pill outline behind each item, sized for two-word labels; these labels vary in
+   length, so that is swapped for a simple dot separator.
+   ------------------------------------------------------------------------ */
+.pp-marquee {
+  background: linear-gradient(100deg, var(--pp-orange) 0%, var(--pp-orange-soft) 100%);
+  padding: 34px 0;
+  overflow: hidden;
+}
+.pp-marquee .marquee { --duration: 46s; }
+.pp-marquee .marquee-group { min-width: max-content; }
+.pp-marquee .text::before { display: none; }
+.pp-marquee .text .title {
+  color: var(--pp-ink);
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 26px 0 0;
+  white-space: nowrap;
+}
+.pp-marquee .marquee-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(0, 16, 25, 0.45);
+  margin-right: 26px;
+  flex: 0 0 auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pp-marquee .marquee-group { animation: none; }
+  .pp-marquee .marquee { overflow-x: auto; }
+}
+
+/* ---------- "What lands in your territory" ----------
+   The template's .work-single-box editorial row: ghost number, copy, image.
+   ------------------------------------------------------------------------ */
+.pp-work { background-color: var(--pp-ink); }
+.pp-work .sec-title { margin-bottom: 56px; }
+.pp-work .sec-title h2 { color: #fff; }
+
+.work-single-box.pp-work-row {
+  background: var(--pp-navy);
+  border: 1px solid var(--pp-line);
+  border-radius: 22px;
+  padding: 34px 34px 34px 130px;
+  margin-bottom: 24px;
+  gap: 40px;
+  justify-content: space-between;
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+.work-single-box.pp-work-row:last-child { margin-bottom: 0; }
+.work-single-box.pp-work-row:hover {
+  border-color: var(--pp-orange);
+  transform: translateY(-4px);
+}
+.work-single-box.pp-work-row h3.wokr-number {
+  top: 34px;
+  left: 40px;
+  font-family: var(--heading-font-family);
+  font-size: 46px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.14);
+  margin: 0;
+}
+.work-single-box.pp-work-row .work-content .title {
+  color: #fff;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+.work-single-box.pp-work-row .work-content p {
+  color: var(--text-color);
+  margin: 0 40px 0 0;
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 46ch;
+}
+.work-single-box.pp-work-row .work-img {
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  line-height: 0;
+}
+.work-single-box.pp-work-row .work-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .work-single-box.pp-work-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px 26px 26px;
+    gap: 24px;
+  }
+  .work-single-box.pp-work-row h3.wokr-number {
+    position: static;
+    margin-bottom: 6px;
+  }
+  .work-single-box.pp-work-row .work-content p { margin-right: 0; }
+  .work-single-box.pp-work-row .work-img { width: 100%; }
+}
