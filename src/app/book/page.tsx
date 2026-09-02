@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import LayoutWrapper from "../LayoutWrapper";
 import PageHero from "../section/shared/PageHero";
+import PhotoBand from "../section/shared/PhotoBand";
 import CalendarEmbed from "../section/book/CalendarEmbed";
 import WhatWeCover from "../section/book/WhatWeCover";
 
@@ -25,6 +26,11 @@ export default function BookPage(): JSX.Element {
         subhead="Pick a time below. We'll walk you through the territory map for your area, give you a realistic lead range, and answer anything you want to ask. No pitch."
       />
       <CalendarEmbed />
+      <PhotoBand
+        src="/assets/images/photos/paver-truck.jpg"
+        alt="A paver working off a dump truck on a road job"
+        height="short"
+      />
       <WhatWeCover />
     </LayoutWrapper>
   );

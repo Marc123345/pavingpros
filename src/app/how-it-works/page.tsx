@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import LayoutWrapper from "../LayoutWrapper";
 import PageHero from "../section/shared/PageHero";
+import PhotoBand from "../section/shared/PhotoBand";
 import ProcessSteps from "../section/how-it-works/ProcessSteps";
 import SampleLead from "../section/how-it-works/SampleLead";
 import Faq from "../section/how-it-works/Faq";
@@ -26,6 +27,11 @@ export default function HowItWorksPage(): JSX.Element {
         subhead="Here is exactly what happens between someone needing a driveway or lot paved and you getting the call."
       />
       <ProcessSteps />
+      <PhotoBand
+        src="/assets/images/photos/crew-laying.jpg"
+        alt="A crew raking and laying hot asphalt behind a paver"
+        caption="You call, you quote, you close."
+      />
       <SampleLead />
       <Faq />
       <ClosingCta headline="One paver per territory. Check whether yours is still open." />

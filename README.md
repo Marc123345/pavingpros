@@ -93,10 +93,16 @@ Two kinds:
 - **Brand diagrams** — `public/assets/images/brand/`. Purpose-built SVGs in the
   palette: the hero territory map, the exclusive-vs-shared lead routing comparison,
   and the demand-routing diagram on About.
-- **Photography** — `public/assets/images/photos/`. Four Pexels shots (paving crew,
-  road roller, aerial parking lot, residential driveway) used on the home page,
-  pricing page, and About. Licence and sources are in
-  `public/assets/images/photos/CREDITS.md`.
+- **Photography** — `public/assets/images/photos/`. Ten Pexels shots covering the
+  crew, a roller, a paver and dump truck, an aerial lot, a driveway, crack sealing,
+  fresh striping, a cracked surface and an asphalt texture. Licence and per-file
+  sources are in `public/assets/images/photos/CREDITS.md`. All are Pexels rather
+  than found on the open web, because that licence actually permits commercial use
+  on a client site.
+
+  `PhotoBand` (`src/app/section/shared/PhotoBand.tsx`) is the full-bleed divider
+  used on How It Works, Book and Sign Up; pass `height="short"` for a plain divider
+  or add a `caption` for a feature band.
 
 The template's own photos were grey `860 x 600` placeholders, so none of them are
 used. Replace the Pexels stock with real member job-site photos as soon as any are

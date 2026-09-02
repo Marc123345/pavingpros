@@ -1459,3 +1459,64 @@
   .problem-section { padding: 90px 0; }
   .problem-section .image-column .inner-column { padding-right: 0; margin-bottom: 44px; }
 }
+
+/* ---------- Photo bands ----------
+   Full-bleed photographic dividers between dark panel sections.
+   ------------------------------------------------------------------------ */
+.photo-band {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  background: var(--pp-ink);
+}
+.photo-band img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.photo-band--tall img { height: clamp(280px, 38vw, 480px); }
+.photo-band--short img { height: clamp(200px, 26vw, 320px); }
+.photo-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 16, 25, 0.55) 0%,
+    rgba(0, 16, 25, 0.2) 45%,
+    rgba(0, 16, 25, 0.85) 100%
+  );
+  pointer-events: none;
+}
+.photo-band .auto-container {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  padding-bottom: 34px;
+}
+.photo-band-caption {
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0;
+  max-width: 22ch;
+}
+
+/* Asphalt texture behind the member quotes */
+.testimonials-pp {
+  position: relative;
+  background-color: var(--pp-navy);
+  background-image: url("/assets/images/photos/asphalt-texture.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.testimonials-pp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 21, 41, 0.93);
+}
+.testimonials-pp > .auto-container { position: relative; z-index: 1; }

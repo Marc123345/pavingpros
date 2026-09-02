@@ -18,6 +18,13 @@ const jobs = [
   },
   {
     number: "03",
+    title: "Crack filling and repairs",
+    text: "Alligator cracking and potholes an owner wants sealed before they spread across the lot.",
+    img: "/assets/images/photos/crack-seal.jpg",
+    alt: "Hot crack sealant being poured into a split in the asphalt",
+  },
+  {
+    number: "04",
     title: "Sealcoating and striping",
     text: "Smaller, faster jobs that fill the gaps between the big pours.",
     img: "/assets/images/photos/road-roller.jpg",

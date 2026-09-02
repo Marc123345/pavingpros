@@ -9,6 +9,12 @@ free for commercial use, no attribution required, no permission needed.
 | `road-roller.jpg` | https://www.pexels.com/photo/4390530/ |
 | `parking-lot.jpg` | https://www.pexels.com/photo/5231181/ |
 | `driveway.jpg` | https://www.pexels.com/photo/24524484/ |
+| `crew-laying.jpg` | https://www.pexels.com/photo/4575148/ |
+| `crack-seal.jpg` | https://www.pexels.com/photo/6018642/ |
+| `striping.jpg` | https://www.pexels.com/photo/3618594/ |
+| `paver-truck.jpg` | https://www.pexels.com/photo/8995385/ |
+| `asphalt-crack.jpg` | https://www.pexels.com/photo/9963248/ |
+| `asphalt-texture.jpg` | https://www.pexels.com/photo/4040619/ |
 
 These are stock placeholders. Replace them with real job-site photos from member
 contractors as soon as any are available — a directory selling exclusivity is
