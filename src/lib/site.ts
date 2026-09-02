@@ -6,6 +6,16 @@
  * approved copy deck. Fill these in and the whole site updates.
  */
 
+/**
+ * GoHighLevel / LeadConnector booking calendar, taken from the Paving Leads
+ * site (Marc123345/Pavingleads). This is the live consultation calendar and
+ * it is embedded on /book. NOTE: the widget is currently configured for a
+ * 30-minute slot in the Asia/Jerusalem timezone — check both in GoHighLevel
+ * before launch, since US contractors will see the converted times.
+ */
+export const calendarEmbedUrl =
+  "https://api.leadconnectorhq.com/widget/booking/JTJtFTRYwd9cTACA8c1r";
+
 export const site = {
   name: "Paving Pros",
   tagline: "Exclusive paving leads in your territory",
@@ -16,8 +26,8 @@ export const site = {
   phoneHref: "tel:+15550000000",
   email: "hello@pavingpros.com",
 
-  // TODO: booking link (Calendly / GHL / etc.)
-  bookingUrl: "#",
+  // Internal page that embeds the calendar below. Every "Book a call" points here.
+  bookingUrl: "/book",
 
   social: {
     facebook: "#",

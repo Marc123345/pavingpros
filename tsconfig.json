@@ -24,7 +24,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "typeRoots": ["./node_modules/@types", "./types"],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -36,11 +38,9 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/types/**/*.d.ts",
-    "types/**/*.d.ts"
+    "src/types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules"
   ]
 }
-

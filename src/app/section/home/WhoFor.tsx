@@ -8,7 +8,7 @@ const WhoFor = () => {
       className="why-choose-us-section-1 section-padding theme-color1-bg"
     >
       <div className="auto-container">
-        <div className="row g-4 align-items-center">
+        <div className="row g-5 align-items-center">
           <div className="col-xl-6">
             <div className="why-choose-us-content-1">
               <div className="sec-title">
@@ -28,6 +28,14 @@ const WhoFor = () => {
             </div>
           </div>
           <div className="col-xl-6">
+            <figure className="accent-photo wow fadeInUp">
+              <AppImage
+                src="/assets/images/photos/paving-crew.jpg"
+                alt="A paving crew laying hot asphalt behind a dump truck"
+                width={1400}
+                height={1050}
+              />
+            </figure>
             <div className="fit-list">
               <div className="fit-card fit-card--yes wow fadeInUp">
                 <h4 className="title">

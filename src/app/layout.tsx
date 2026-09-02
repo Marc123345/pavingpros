@@ -4,7 +4,6 @@ import "./styles/css/style.css";
 import "./styles/css/responsive.css";
 import "./styles/css/bg-images.css";
 import "./styles/css/pavingpros.css";
-import ClientPreloader from "./components/ClientPreloader";
 import ClientErrorBoundary from "./components/ClientErrorBoundary";
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function RootLayout({
       </head>
       <body className="scroll-smooth">
         <ClientErrorBoundary>
-          <ClientPreloader />
           {children}
         </ClientErrorBoundary>
       </body>

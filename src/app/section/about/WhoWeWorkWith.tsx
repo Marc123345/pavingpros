@@ -1,4 +1,5 @@
 import React from "react";
+import AppImage from "../../components/elements/AppImage";
 
 const services = [
   "Residential driveways",
@@ -24,6 +25,14 @@ const WhoWeWorkWith = () => {
             </p>
           </div>
           <div className="col-lg-6">
+            <figure className="accent-photo wow fadeInUp">
+              <AppImage
+                src="/assets/images/photos/road-roller.jpg"
+                alt="A roller compacting a fresh asphalt surface"
+                width={1400}
+                height={933}
+              />
+            </figure>
             <ul className="service-chips">
               {services.map((s) => (
                 <li key={s}>{s}</li>

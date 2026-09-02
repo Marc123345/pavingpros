@@ -69,7 +69,7 @@ const Header: React.FC = (): JSX.Element => {
               <i className="icon fa fa-times"></i>
             </div>
           </div>
-          <MobileMenu extraClassName="clearfix" />
+          <MobileMenu extraClassName="clearfix" onNavigate={closeMobile} />
           <ul className="contact-list-one">
             <li>
               <div className="contact-info-box">

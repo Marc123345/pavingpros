@@ -19,12 +19,32 @@ const JobValue = () => {
           <div className="col-lg-7">
             <div className="job-value-grid">
               <div className="job-value-card wow fadeInUp">
-                <span className="job-value-label">Residential driveway</span>
-                <span className="job-value-figure">{jobValues.residential}</span>
+                <div className="job-value-photo">
+                  <AppImage
+                    src="/assets/images/photos/driveway.jpg"
+                    alt="A finished residential driveway running up to a double garage"
+                    width={1400}
+                    height={933}
+                  />
+                </div>
+                <div className="job-value-body">
+                  <span className="job-value-label">Residential driveway</span>
+                  <span className="job-value-figure">{jobValues.residential}</span>
+                </div>
               </div>
               <div className="job-value-card wow fadeInUp" data-wow-delay="200ms">
-                <span className="job-value-label">Commercial lot</span>
-                <span className="job-value-figure">{jobValues.commercial}</span>
+                <div className="job-value-photo">
+                  <AppImage
+                    src="/assets/images/photos/parking-lot.jpg"
+                    alt="Overhead view of a freshly striped commercial parking lot"
+                    width={1400}
+                    height={788}
+                  />
+                </div>
+                <div className="job-value-body">
+                  <span className="job-value-label">Commercial lot</span>
+                  <span className="job-value-figure">{jobValues.commercial}</span>
+                </div>
               </div>
             </div>
             <p className="job-value-note">

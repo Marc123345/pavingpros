@@ -12,7 +12,12 @@ Nexella Next.js template and recoloured to the Paving Pros brand.
 | `/pricing` | Pricing |
 | `/about` | About |
 | `/sign-up` | Sign Up / Contact |
+| `/book` | Book a call — embeds the live booking calendar |
 | `/thank-you` | Post-submission confirmation (noindex) |
+
+The home page hero carries a short version of the sign-up form (company, name,
+phone, email, city/state). It posts to the same `/api/signup` endpoint as the
+full form and redirects to `/thank-you`.
 
 ## Brand
 
@@ -50,7 +55,13 @@ Also outstanding:
 
 - **`src/app/api/signup/route.ts`** accepts the territory request and returns success
   but does not deliver it anywhere yet. Wire it to the CRM, an email provider, or a
-  webhook before launch.
+  webhook before launch. Both the hero form and the full form post to it; the hero
+  form tags its payload with `source: "hero"`.
+- **The booking calendar** (`calendarEmbedUrl` in `src/lib/site.ts`) is the live
+  GoHighLevel/LeadConnector widget lifted from the Paving Leads site. Two things to
+  check in GoHighLevel before launch: the slot is currently **30 minutes** (the old
+  Paving Leads copy said 15), and it is serving times in **Asia/Jerusalem**, which is
+  what US contractors will be converting from.
 - Two copy claims are marked `[VERIFY]` in the deck and are live on the site as written:
   the member dashboard (How It Works, step 6) and the off-season pause. Confirm both,
   or cut them.
@@ -69,10 +80,33 @@ different port if you override the default.
 
 ## Imagery
 
-The template shipped grey placeholder photos, so none are used. The three brand
-diagrams in `public/assets/images/brand/` (territory map, exclusive-vs-shared lead
-routing, demand routing) and the logo are purpose-built SVGs in the brand palette.
-Swap in real job-site photography whenever it is available.
+Two kinds:
+
+- **Brand diagrams** — `public/assets/images/brand/`. Purpose-built SVGs in the
+  palette: the hero territory map, the exclusive-vs-shared lead routing comparison,
+  and the demand-routing diagram on About. The logo is here too.
+- **Photography** — `public/assets/images/photos/`. Four Pexels shots (paving crew,
+  road roller, aerial parking lot, residential driveway) used on the home page,
+  pricing page, and About. Licence and sources are in
+  `public/assets/images/photos/CREDITS.md`.
+
+The template's own photos were grey `860 x 600` placeholders, so none of them are
+used. Replace the Pexels stock with real member job-site photos as soon as any are
+available.
+
+## Two template mechanics that were removed
+
+Both were replaced rather than patched, because both could leave a visitor looking
+at nothing:
+
+- **The preloader** covered the page until `document.readyState` was complete *and*
+  every `<img>` reported `complete`. A hidden logo in the mobile drawer never did,
+  so the page stayed black.
+- **wow.js** set `visibility: hidden` inline on every `.wow` element and revealed
+  them from offsets cached at init. Lazy-loaded images shifted the layout and the
+  offsets went stale. `RevealOnScroll` replaces it with an IntersectionObserver that
+  fails open — the hidden state is only ever applied by the script, so if it does not
+  run the content is simply visible.
 
 ## A note on styles
 
