@@ -59,8 +59,8 @@ export default function ServicesPage(): JSX.Element {
       </section>
 
       <ClosingCta
-        headline="Not sure which one you need?"
-        body="Send us the address. We'll come and look, and tell you the cheapest thing that actually fixes it."
+        headline="We'll work out which one you need."
+        body="Send us the address. We'll come and look, and price the cheapest thing that actually fixes it."
         buttonLabel="Get my free estimate"
         href="/contact"
       />

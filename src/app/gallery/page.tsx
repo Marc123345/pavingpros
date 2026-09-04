@@ -56,7 +56,7 @@ export default function GalleryPage(): JSX.Element {
       </section>
 
       <ClosingCta
-        headline="Want yours to look like this?"
+        headline="Get a price for yours."
         body="Free estimate, in writing, with no obligation to go ahead."
         buttonLabel="Get my free estimate"
         href="/contact"

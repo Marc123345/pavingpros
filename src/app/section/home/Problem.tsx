@@ -37,8 +37,8 @@ const Problem = () => {
                   Why it matters
                 </span>
                 <h2>
-                  A crack is not a crack. <br />
-                  It&apos;s a route for water.
+                  A crack is how water <br />
+                  gets into the base.
                 </h2>
               </div>
 

@@ -23,39 +23,32 @@
   overflow: hidden;
   padding: 190px 0 120px;
   background-color: var(--pp-ink);
-  background-image:
-    radial-gradient(900px 640px at 76% 40%, rgba(247, 147, 30, 0.15) 0%, rgba(247, 147, 30, 0) 70%),
-    radial-gradient(720px 520px at 6% 6%, rgba(0, 61, 112, 0.5) 0%, rgba(0, 21, 41, 0) 72%),
-    linear-gradient(162deg, #001c33 0%, #001019 64%);
-}
-.pp-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 74px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 74px);
-  -webkit-mask-image: radial-gradient(72% 72% at 45% 45%, #000 0%, transparent 100%);
-  mask-image: radial-gradient(72% 72% at 45% 45%, #000 0%, transparent 100%);
-  pointer-events: none;
 }
 .pp-hero .auto-container { position: relative; z-index: 2; }
 .pp-hero-row { row-gap: 56px; }
 
-/* Territory map sits behind the copy as texture, not as a competing object */
-.hero-art {
+/* Full-bleed photograph of the work, darkened from the left so the headline and
+   the estimate card stay legible over it. */
+.pp-hero-photo {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-58%, -46%);
-  width: min(82vw, 1000px);
-  z-index: 1;
-  opacity: 0.17;
+  inset: 0;
+  z-index: 0;
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(58% 58% at 50% 50%, #000 25%, transparent 100%);
-  mask-image: radial-gradient(58% 58% at 50% 50%, #000 25%, transparent 100%);
 }
-.hero-art img { width: 100%; height: auto; }
+.pp-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+.pp-hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(96deg, rgba(0, 16, 25, 0.95) 0%, rgba(0, 16, 25, 0.88) 38%, rgba(0, 16, 25, 0.6) 100%),
+    linear-gradient(0deg, rgba(0, 16, 25, 0.9) 0%, rgba(0, 16, 25, 0) 38%);
+}
 
 .pp-hero-eyebrow {
   display: inline-block;
@@ -226,7 +219,6 @@
 @media (max-width: 991.98px) {
   .pp-hero { padding: 160px 0 90px; }
   .pp-hero-title { max-width: 20ch; }
-  .hero-art { transform: translate(-50%, -50%); opacity: 0.12; }
 }
 @media (max-width: 575.98px) {
   .pp-hero { padding: 140px 0 70px; }
@@ -256,25 +248,15 @@
 }
 
 /* ---------- Page hero (inner pages) ---------- */
+/* Plain brand-navy band. The glow-plus-grid-mesh treatment that used to be
+   here read as a generated SaaS header rather than a paving company. */
 .page-hero {
   position: relative;
   overflow: hidden;
   padding: 200px 0 110px;
   background-color: var(--pp-ink);
-  background-image:
-    radial-gradient(760px 420px at 82% 30%, rgba(247, 147, 30, 0.14) 0%, rgba(247, 147, 30, 0) 70%),
-    linear-gradient(165deg, #001c33 0%, #001019 70%);
-}
-.page-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 74px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 74px);
-  -webkit-mask-image: radial-gradient(65% 80% at 70% 40%, #000 0%, transparent 100%);
-  mask-image: radial-gradient(65% 80% at 70% 40%, #000 0%, transparent 100%);
-  pointer-events: none;
+  background-image: linear-gradient(165deg, #00243f 0%, #001019 72%);
+  border-bottom: 1px solid var(--pp-line);
 }
 .page-hero-inner {
   position: relative;
@@ -973,47 +955,9 @@
 .main-footer .footer-des { max-width: 340px; }
 .problem-section .inner-column { padding-top: 0; }
 
-/* ---------- Hero: asphalt ground, orange horizon ---------- */
-.pp-hero {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--pp-ink);
-  background-image:
-    radial-gradient(900px 620px at 78% 42%, rgba(247, 147, 30, 0.16) 0%, rgba(247, 147, 30, 0) 70%),
-    radial-gradient(700px 500px at 8% 8%, rgba(0, 61, 112, 0.55) 0%, rgba(0, 21, 41, 0) 72%),
-    linear-gradient(160deg, #001c33 0%, #001019 62%);
-}
-.pp-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 74px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 74px);
-  -webkit-mask-image: radial-gradient(70% 70% at 50% 45%, #000 0%, transparent 100%);
-  mask-image: radial-gradient(70% 70% at 50% 45%, #000 0%, transparent 100%);
-  pointer-events: none;
-}
-.pp-hero .container-fluid { position: relative; z-index: 3; }
-
-.hero-art {
-  position: absolute;
-  right: 2%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(46vw, 700px);
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.95;
-}
-.hero-art img { width: 100%; height: auto; }
-
-@media (max-width: 1399.98px) {
-  .hero-art { width: min(42vw, 560px); right: 0; opacity: 0.55; }
-}
-@media (max-width: 991.98px) {
-  .hero-art { display: none; }
-}
+/* The duplicate .pp-hero / .hero-art block that used to live here was dead:
+   it re-declared the orange-glow + grid-mesh background and overrode the
+   photographic hero above. Removed with the territory graphic. */
 
 /* ---------- Diagram figures ---------- */
 .diagram-figure { margin: 0; }

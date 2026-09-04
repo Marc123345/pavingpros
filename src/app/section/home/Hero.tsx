@@ -6,12 +6,15 @@ import HeroForm from "./HeroForm";
 const Hero = () => {
   return (
     <section className="pp-hero">
-      <div className="hero-art" aria-hidden="true">
+      {/* A photograph of the actual work, not an abstract graphic. The previous
+          background was hero-territory.svg — a "territory map" left over from
+          the contractor-directory version of this site. */}
+      <div className="pp-hero-photo" aria-hidden="true">
         <AppImage
-          src="/assets/images/brand/hero-territory.svg"
+          src="/assets/images/photos/roller-fresh-asphalt.jpg"
           alt=""
-          width={760}
-          height={700}
+          width={1600}
+          height={900}
           priority
         />
       </div>

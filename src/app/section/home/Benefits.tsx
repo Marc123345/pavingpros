@@ -4,7 +4,7 @@ import { estimateWindow } from "../../../lib/site";
 const reasons = [
   {
     icon: "fa-solid fa-layer-group",
-    title: "We build the base, not just the surface",
+    title: "The base decides how long it lasts",
     text: "Most asphalt that fails early failed underneath. We excavate, grade and compact a proper aggregate base before any asphalt goes down, because that is what decides whether it lasts five years or twenty.",
     feature: true,
   },

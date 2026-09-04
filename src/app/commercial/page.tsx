@@ -20,7 +20,7 @@ const points = [
   },
   {
     title: "Striping that meets the code",
-    text: "Accessible spaces, access aisles, signage heights and fire lanes marked to requirement — not just repainted where the old faded lines were.",
+    text: "Accessible spaces, access aisles, signage heights and fire lanes marked to requirement, rather than repainted over the old faded lines.",
   },
   {
     title: "Certificates before we mobilise",
